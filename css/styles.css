@@ -45,7 +45,7 @@ ul {
 
 header {
   border-bottom: 1px solid #ECECEC;
-   padding-top: 24px;
+  padding-top: 24px;
   padding-bottom: 25px;
 }
 
@@ -82,6 +82,7 @@ header {
 .navigation-link {
   display: flex;
   align-items: center;
+  
 }
 
 .navigation-link .list-style {
@@ -109,7 +110,18 @@ header {
 
 .link.current {
   color: var(--accent-color);
+  position: relative;
 }
+
+.link.current::after {
+  content: "";
+  position: absolute;
+  bottom: -33.6px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  }
 
 .contact {
   display: flex;
@@ -299,6 +311,34 @@ width: 270px;
   margin-top: 50px;
 }
 
+.work-list{
+  position: relative;
+}
+
+.work-thumb{
+    position: absolute;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+
+}
+
+.work-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero-text-color);
+}
+
 /* ouer team */
 .team{
   background: #F5F4FA;
@@ -406,8 +446,7 @@ width: 270px;
   display: flex;
   list-style: none;
   margin-top: 50px;
-  
-  
+   
 }
 
 .customer-link{
@@ -510,7 +549,8 @@ img {
 .list-project{
   margin-bottom: 30px;  
   border: 1px solid #EEEEEE;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+   position: relative;
 }
 
 .list-project:nth-child(3n){
@@ -529,9 +569,57 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.galary-link{
+.gallary-link{
+  display: block;
+  color: inherit;
   text-decoration: none;
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* .gallary-thumb:{
+ 
+} */
+
+/* .gallary-image{
+ position: relative;
+  overflow: hidden;
+} */
+
+/* .gallary-overlay::before {
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #188CE8;
+  transform: translateY(100%);
+  transition: 250ms;
+  opacity: 0;
+} */
+
+/* .gallary-overlay:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+ */
+/* .gallary-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50% -50%);  
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--hero-text-color);
+  opacity: 1;
+  
+} */
+
 
 .gallary-name {
   padding: 20px 24px 20px 24px;
