@@ -83,7 +83,6 @@ header {
 .navigation-link {
   display: flex;
   align-items: center;
-  
 }
 
 .navigation-link .list-style {
@@ -108,7 +107,7 @@ header {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
- 
+  transition: var(--main-transition);
 }
 
 .link.current {
@@ -132,12 +131,10 @@ header {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  
 }
 
 .contact .list-style{
    margin-right: 50px;
-   
 }
  
 .contact .list-style:last-child {
@@ -152,6 +149,7 @@ header {
 .contact-mailto:hover .icon-envelope,
 .contact-mailto:focus .icon-envelope {
   fill: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 .contact-mailto {
@@ -170,6 +168,7 @@ header {
 .contact-call:hover .icon-smartphone,
 .contact-call:focus .icon-smartphone {
   fill: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 .contact-call {
@@ -183,11 +182,13 @@ header {
 .contact-mailto:hover,
 .contact-mailto:focus {
   color: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 .contact-call:hover,
 .contact-call:focus {
   color: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 /* body index.html*/
@@ -206,8 +207,8 @@ button {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-
 }
+
 .hero-wrapper{
   display: flex;
   flex-direction: column;
@@ -246,10 +247,10 @@ button {
   background: #188CE8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: var(--main-transition);
 }
 
 /* modal */
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -267,10 +268,10 @@ button {
   pointer-events: none;
 }
 
-/* .backdrop.is-hidden .modal {
+.backdrop.is-hidden .modal {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.1);
-} */
+}
 
 .modal {
   position: absolute;
@@ -281,12 +282,29 @@ button {
   height: 581px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-    
+  border-radius: 4px; 
   transition: transform var(--main-transition);
- 
 } 
 
+.icon-modal-close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--hero-text-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ .icon-close{
+    width: 11px;
+    height: 11px;
+}
 
 /* feature */
 .list{
@@ -370,7 +388,6 @@ width: 270px;
     left: 0;
     width: 100%;
     background-color: rgba(47, 48, 58, 0.8);
-
 }
 
 .work-text{
@@ -474,7 +491,6 @@ width: 270px;
 }
 
 /* customer */
-
 .customer{
   padding-top: 94px;
   padding-bottom: 94px;
@@ -492,7 +508,6 @@ width: 270px;
   display: flex;
   list-style: none;
   margin-top: 50px;
-   
 }
 
 .customer-link{
@@ -517,6 +532,7 @@ width: 270px;
 .customer-link:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 /* body portfolio.html */
@@ -579,13 +595,13 @@ margin-right: 8px;
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition: var(--main-transition);
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
-  
 }
 
 .gallary-list {
@@ -593,7 +609,6 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  
 }
 
 .list-project{
@@ -601,7 +616,6 @@ img {
   border: 1px solid #EEEEEE;
   box-sizing: border-box; 
   transition: var(--main-transition);
-  
 }
 
 .list-project:nth-child(3n){
@@ -616,7 +630,7 @@ img {
 .list-project:focus{
   background: #FFFFFF;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  
+  transition: var(--main-transition);
 }
 
 .gallary-link{
@@ -762,11 +776,13 @@ footer {
 .footer-mailto:hover,
 .footer-mailto:focus {
   color: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 .footer-call:hover,
 .footer-call:focus {
   color: var(--accent-color);
+  transition: var(--main-transition);
 }
 
 .footer-join {
@@ -812,4 +828,5 @@ margin-right: 10px;
 .footer-icon-link:hover,
 .footer-icon-link:focus {
   background: var(--accent-color);
+  transition: var(--main-transition);
 }
